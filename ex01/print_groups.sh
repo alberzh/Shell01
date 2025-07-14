@@ -1,1 +1,1 @@
-groups
+groups $FT_USER
