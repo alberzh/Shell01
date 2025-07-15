@@ -1,18 +1,13 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    find_sh.sh                                         :+:      :+:    :+:    #
+#    count_files.sh                                     :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: azaragoz <azaragoz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/14 16:23:10 by azaragoz          #+#    #+#              #
-#    Updated: 2025/07/15 16:24:06 by azaragoz         ###   ########.fr        #
+#    Created: 2025/07/15 16:22:45 by azaragoz          #+#    #+#              #
+#    Updated: 2025/07/15 16:24:45 by azaragoz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# find . te busca en el directorio actual y subdirectorios 
-# -name "*.sh" busca archivos con extensión .sh
-# awk -F "." divide la línea por el punto
-# $NF = "" elimina la última columna (extensión .sh en nuestro caso) asignando un valor vacío
-# print $0 imprime la línea completa después de haber eliminado la extensión
-find . -name "*.sh" | awk -F "." '{ $NF = "" ; print $0 }'
+find . | wc -l 
